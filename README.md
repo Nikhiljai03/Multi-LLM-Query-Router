@@ -1,15 +1,26 @@
 # 🚀 AI Query Router - Multi-Model LLM Gateway
 
-A production-grade distributed AI system that intelligently routes queries to different LLM models based on complexity, with built-in caching, event streaming, and multi-provider fallback.
+**AI Query Router** is a production-ready backend service that routes natural language queries to the optimal large language model (LLM) based on query complexity. It combines fast local caching, event streaming, and reliable fallback to maximize performance and minimize cost.
 
-## ✨ Key Features
+---
 
-- **Intelligent 3-Tier Routing** - Automatically routes queries to appropriate models (8B/70B/120B) based on complexity
-- **Multi-Provider Support** - Groq (primary), Together AI (fallback) with automatic failover
-- **Redis Caching** - 40-60% cache hit rate, <20ms for cached responses
-- **Kafka Event Streaming** - Real-time analytics and monitoring
-- **Cost Optimization** - 60% cost reduction through smart model selection
-- **Production Ready** - Docker support, structured logging, health checks
+## ✨ Why this project matters
+
+- Smart query classification reduces inference cost by routing simpler requests to smaller models.
+- Multi-provider architecture ensures availability even if one LLM endpoint is hit or down.
+- Real-time metrics and event streaming make it easy to monitor and scale.
+- Lightweight architecture is easy to deploy with Docker and compose.
+
+---
+
+## 🧩 Key Features
+
+- **Intelligent 3-tier routing**: Simple (8B), Medium (70B), Complex (120B)
+- **Provider fallback**: Groq primary, Together AI fallback
+- **Redis caching**: 40-60% cache hit rate, cached repeat queries in <20ms
+- **Kafka event pipeline**: query analytics + usage logging
+- **Publish-ready**: Docker, environment configuration, health checks
+- **Clean API**: REST endpoints with JSON schema and OpenAPI docs
 
 ## 🏗️ Architecture
 
