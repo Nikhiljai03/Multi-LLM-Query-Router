@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.staging
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+log/
+
+# Database
+*.db
+*.sqlite3
+*.sqlite
+postgres-data/
+redis-data/
+
+# Docker
+docker-compose.override.yml
+.docker/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.tmp/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Node.js (if any)
+node_modules/
+npm-debug.log*
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Documentation builds
+docs/_build/
+
+# Local development
+.local
+.dev

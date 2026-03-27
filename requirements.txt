@@ -1,0 +1,26 @@
+# Core Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Database (PostgreSQL - optional, can be installed later if needed)
+# psycopg2-binary==2.9.9  # Commented out - requires PostgreSQL dev tools
+sqlalchemy==2.0.25
+
+# Caching & Rate Limiting
+redis==5.0.1
+
+# Event Streaming
+kafka-python==2.0.2
+
+# HTTP Client
+httpx==0.25.2
+aiohttp==3.9.1
+
+# Monitoring & Logging
+prometheus-client==0.19.0
+python-json-logger==2.0.7
+
+# Utilities
+python-dotenv==1.0.0

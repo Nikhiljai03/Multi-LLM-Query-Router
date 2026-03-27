@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Query Router - Multi-Model LLM Gateway</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="18" stroke="url(#gradient)" stroke-width="2"/>
+                    <path d="M20 10 L20 30 M10 20 L30 20" stroke="url(#gradient)" stroke-width="2" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h1>AI Query Router</h1>
+            </div>
+            <div class="subtitle">Multi-Model LLM Gateway with Intelligent Routing</div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Query Input Section -->
+            <div class="query-section">
+                <div class="input-container">
+                    <textarea 
+                        id="queryInput" 
+                        placeholder="Ask me anything... (e.g., 'Explain machine learning' or 'What is the capital of France?')"
+                        rows="4"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                        <button id="submitBtn" class="btn btn-primary">
+                            <span class="btn-text">Send Query</span>
+                            <span class="btn-loader" style="display: none;">
+                                <svg class="spinner" viewBox="0 0 50 50">
+                                    <circle cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Examples -->
+                <div class="examples">
+                    <div class="examples-title">Try these examples:</div>
+                    <div class="example-chips">
+                        <button class="chip" data-query="What is AI?">What is AI?</button>
+                        <button class="chip" data-query="Explain binary search">Explain binary search</button>
+                        <button class="chip" data-query="Compare REST and GraphQL APIs">Compare REST and GraphQL</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Response Section -->
+            <div id="responseSection" class="response-section" style="display: none;">
+                <!-- Metadata Cards -->
+                <div class="metadata-grid">
+                    <div class="metadata-card">
+                        <div class="metadata-icon">🎯</div>
+                        <div class="metadata-content">
+                            <div class="metadata-label">Complexity</div>
+                            <div class="metadata-value" id="complexity">-</div>
+                        </div>
+                    </div>
+                    <div class="metadata-card">
+                        <div class="metadata-icon">🤖</div>
+                        <div class="metadata-content">
+                            <div class="metadata-label">Model</div>
+                            <div class="metadata-value" id="model">-</div>
+                        </div>
+                    </div>
+                    <div class="metadata-card">
+                        <div class="metadata-icon">⚡</div>
+                        <div class="metadata-content">
+                            <div class="metadata-label">Latency</div>
+                            <div class="metadata-value" id="latency">-</div>
+                        </div>
+                    </div>
+                    <div class="metadata-card">
+                        <div class="metadata-icon">💰</div>
+                        <div class="metadata-content">
+                            <div class="metadata-label">Cost</div>
+                            <div class="metadata-value" id="cost">-</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Response Content -->
+                <div class="response-content">
+                    <div class="response-header">
+                        <h3>Response</h3>
+                        <button id="copyBtn" class="btn-icon" title="Copy response">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="responseText" class="response-text"></div>
+                </div>
+
+                <!-- Query Info -->
+                <div class="query-info">
+                    <div class="query-info-header">Your Query</div>
+                    <div id="queryEcho" class="query-echo"></div>
+                </div>
+            </div>
+
+            <!-- Error Section -->
+            <div id="errorSection" class="error-section" style="display: none;">
+                <div class="error-icon">⚠️</div>
+                <div class="error-message" id="errorMessage"></div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="/docs" target="_blank">API Docs</a>
+                    <a href="/health" target="_blank">Health Check</a>
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                </div>
+                <div class="footer-text">
+                    Built with FastAPI • Groq • Together AI
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
