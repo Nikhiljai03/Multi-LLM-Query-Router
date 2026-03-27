@@ -298,19 +298,6 @@ MEDIUM_QUERY_MAX_WORDS=50
 - **Kafka Events**: Real-time query analytics
 - **Metrics**: `/api/v1/metrics` endpoint
 
-## 🎓 For Your Resume
-
-This project demonstrates:
-- ✅ Microservices architecture
-- ✅ Async Python programming
-- ✅ Multi-provider AI integration
-- ✅ Distributed caching (Redis)
-- ✅ Event-driven architecture (Kafka)
-- ✅ Docker containerization
-- ✅ Production-ready code
-- ✅ API design best practices
-- ✅ Cost optimization strategies
-- ✅ Intelligent routing algorithms
 
 ## 🆘 Troubleshooting
 
@@ -336,10 +323,6 @@ docker-compose up -d
 - Restart application: `python main.py`
 - Check logs for "Calling Groq with model: ..."
 
-## 📚 Additional Documentation
-
-- **RESUME_PROJECT_DESCRIPTION.md** - Resume bullet points
-- **test_complete_flow.py** - Comprehensive test suite
 
 ## 🤝 Contributing
 
@@ -348,12 +331,8 @@ docker-compose up -d
 3. Make your changes
 4. Submit a pull request
 
-## 📄 License
 
-MIT License - See LICENSE file for details
 
 ## 🌟 Star this repo if you find it useful!
 
 ---
-
-**Built with ❤️ for production-level AI infrastructure**
